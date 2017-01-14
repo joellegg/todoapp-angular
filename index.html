@@ -14,8 +14,9 @@
       <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editing-label" type="text"/>
       <div class="actions">
         <a href="" ng-click=" editing = !editing">edit</a>
-        <a href="" ng-click="helloConsole()">save</a>
-        <a href="" class="delete">delete</a>
+        <a href="" ng-click="saveTodo(todo)">save</a>
+        <!-- ng-repeat gives an index for each todo in the todos list -->
+        <a href="" ng-click="deleteTodo(todo, $index)" class="delete">delete</a>
       </div>
     </div>
   </div>
